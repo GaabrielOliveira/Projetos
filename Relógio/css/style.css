@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* imagens */
+/* manhã */
+body.morning {
+    background-image: url('../img/manha.jpeg'); /* Substitua pelo caminho correto */
+}
+/* tarde */
+body.afternoon {
+    background-image: url('../img/tarde.jpg'); /* Substitua pelo caminho correto */
+}
+/* noite */
+body.night {
+    background-image: url('../img/noite.jpg'); /* Substitua pelo caminho correto */
+}
+
+/* corpo do relógio */
+.relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    width: 550px;
+    border-radius: 15px;
+    transition: background 0.5s ease-in-out;
+}
+
+/* background do número */
+.relogio div {
+    height: 170px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 15px;
+    letter-spacing: 3px;
+}
+
+/* manhã */
+body.morning .relogio {
+    background: linear-gradient(180deg, rgba(190, 190, 190, 0.171), transparent);
+    box-shadow: 0px 8px 10px rgba(64, 64, 64, 0.9);
+}
+body.morning .relogio div{
+    background: linear-gradient(180deg, rgba(190, 190, 190, 0.195), transparent);
+    box-shadow: 0px 8px 10px rgba(64, 64, 64, 0.9);
+}
+
+/* tarde */
+body.afternoon .relogio {
+    background: rgba(255, 255, 255, 0.152);
+    box-shadow: 5px 5px 15px rgba(78, 78, 78, 0.7);
+}
+body.afternoon .relogio div {
+    background: rgba(248, 248, 248, 0.164);
+    box-shadow: 4px 4px 15px rgba(78, 78, 78, 0.7);
+}
+
+/* noite */
+body.night .relogio {
+    background: rgba(96, 178, 249, 0.149);
+    /* background: linear-gradient(180deg, rgba(190, 190, 190, 0.171), transparent); */
+    box-shadow: 4px 4px 15px rgba(3, 3, 3, 0.992);
+}
+body.night .relogio div {
+    background: rgba(96, 178, 249, 0.189);
+    /* background: linear-gradient(180deg, rgba(190, 190, 190, 0.195), transparent); */
+    box-shadow: 4px 4px 15px rgba(3, 3, 3, 0.992);
+}
+
+.relogio span {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.relogio span.tempo {
+    font-size: 10px;
+}
