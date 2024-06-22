@@ -31,3 +31,11 @@ const relogio = setInterval(function time() {
         body.className = 'night';
     }
 })
+
+// Controle do audio
+const audioPlayer = document.getElementById('audio-player');
+    const volumeSlider = document.getElementById('volume-slider');
+
+    volumeSlider.addEventListener('input', function() {
+        audioPlayer.volume = this.value;
+    });
